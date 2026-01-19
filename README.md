@@ -1,43 +1,41 @@
-# Proyecto de Animación con HTML y CSS
+# HTML & CSS Animation Project
 
-Este es un pequeño proyecto personal donde he experimentado con efectos visuales en CSS y HTML. Mi objetivo principal era lograr un efecto atractivo al pasar el ratón sobre una imagen, haciendo que esta cambie de perspectiva y revele otra imagen con una animación suave. Quería explorar cómo se pueden crear efectos llamativos solo con CSS, sin necesidad de JavaScript.
+This is a personal project exploring visual effects with CSS and HTML. The main goal is to create an interactive animation when hovering over an image, changing its perspective and revealing another image with a smooth transition—all without using JavaScript.
 
-## Lenguajes Usados
+## Technologies Used
 
-- **HTML**: Para definir la estructura de la página.
-- **CSS**: Para los estilos y animaciones sin usar JavaScript.
+- **HTML**: For the page structure.  
+- **CSS**: For styling and animations.
 
-## ¿Cómo funciona?
+## How It Works
 
-1. Dentro de un `<article>`, incluyo dos imágenes:
-   - La primera imagen actúa como fondo y tiene una sombra para dar profundidad.
-   - La segunda imagen (Tux) está oculta por defecto y se superpone a la primera cuando ocurre la interacción.
+1. Inside an `<article>`, two images are included:
+   - The first image serves as a background and has a shadow to add depth.  
+   - The second image (Tux) is hidden by default and overlays the first when hovered.
 
-2. Uso `position: absolute` para colocar la imagen de Tux sobre la primera, de manera que pueda mostrarse solo cuando sea necesario.
+2. The Tux image is positioned with `position: absolute` to overlay the first image.
 
-3. Mediante la propiedad `opacity: 0`, la imagen de Tux está oculta hasta que el usuario pase el ratón sobre el artículo.
+3. `opacity: 0` keeps Tux invisible until the user hovers over the article.
 
-4. Cuando el usuario pasa el ratón:
-   - Se aplica una transformación con `perspective`, `rotateX`, `translateY` y `translateZ` para dar un efecto 3D a la imagen.
-   - La imagen de Tux cambia su opacidad a `1` y se desplaza ligeramente hacia arriba.
-   - Se agrega un degradado que oscurece progresivamente la parte inferior del artículo, logrando un efecto más inmersivo.
+4. On hover:
+   - A 3D transformation (`perspective`, `rotateX`, `translateY`, `translateZ`) is applied to the background image.  
+   - Tux’s opacity changes to `1` and it moves slightly upward.  
+   - A gradient darkens the lower part of the article, creating a more immersive effect.
 
-## Archivos
+## Files
 
 ### `index.html`
-Aquí establezco la estructura básica del documento:
+
+Basic structure of the document:
 
 ```html
 <article>
-    <img src="./Imgs/debian_wallpaper.jpg" alt="Fondo Debian">
+    <img src="./Imgs/debian_wallpaper.jpg" alt="Debian Background">
     <img src="./Imgs/tux.png" alt="Tux">
 </article>
-```
+style.css
+Styles and animations:
 
-### `style.css`
-En este archivo aplico los estilos y animaciones:
-
-```css
 article:hover {
     transform:
         perspective(250px)
@@ -50,14 +48,8 @@ article:hover img:last-child {
     opacity: 1;
     transform: translateY(10%);
 }
-```
+How to Use
+Clone this repository:
 
-## ¿Cómo usarlo?
-1. Clona el repositorio en tu ordenador:
-   ```bash
-   git clone https://github.com/mi-usuario/mi-repositorio.git
-   ```
-2. Abre `index.html` en tu navegador favorito.
-
-Espero que este pequeño proyecto te sirva para entender mejor las posibilidades de CSS en animaciones sin JavaScript. ¡Disfrútalo!
-
+git clone https://github.com/mi-usuario/mi-repositorio.git
+Open index.html in your favorite browser.
